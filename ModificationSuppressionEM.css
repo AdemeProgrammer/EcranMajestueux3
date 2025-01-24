@@ -1,0 +1,14 @@
+html{
+    background-image:url("img/suppression.jpg");
+}
+body {
+    background-color: ghostwhite;
+    width: 900px;
+    margin:auto;
+    padding: 32px;
+}
+a {
+    color: darkred;
+    font-weight: bold;
+    text-decoration-line: none;
+}

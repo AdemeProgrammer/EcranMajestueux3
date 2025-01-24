@@ -1,0 +1,40 @@
+html{
+    background-image:url("img/choix1.webp");
+}
+body {
+    background-color: black;
+    width: 900px;
+    padding: 32px;
+    border-radius: 30px;
+}
+
+h1{
+    color:white;
+}
+
+h2{
+    color:white;
+}
+
+h3{
+    color:white;
+}
+
+table{
+    color: white;
+}
+
+
+p{
+    color:white;
+}
+
+input{
+    color:black;
+}
+
+a {
+    color: cornflowerblue;
+    font-weight: bold;
+    text-decoration-line: none;
+}

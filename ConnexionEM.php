@@ -41,7 +41,7 @@ if (isset($_POST['mot_de_passe'])){
     <input type="password" name="mot_de_passe">
     <input type = "submit" name ="validation">
 </form>
-<a href ="InscriptionEM.php"><p>Vous n'êtes pas membre du Ragna Verse ?</p></a>
+<a href ="InscriptionEM.php"><p>Vous n'êtes pas un membre majestueux ?</p></a>
 </body>
 </html>
 
