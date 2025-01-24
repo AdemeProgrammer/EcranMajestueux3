@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = $_POST['prenom'];
     $mot_de_passe = $_POST['mot_de_passe'];
 
-    $req = $modification -> prepare('UPDATE inscrit SET nom = :nom, prenom = :prenom, mot_de_passe = :mot_de_passe WHERE id = :id');
+    $req = $modification -> prepare('UPDATE utilisateurs SET nom = :nom, prenom = :prenom, mot_de_passe = :mot_de_passe WHERE id = :id');
     $req -> execute(array(
         'nom' => $nom,
         'prenom' => $prenom,
