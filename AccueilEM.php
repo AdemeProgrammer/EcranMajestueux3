@@ -18,7 +18,7 @@ if (!isset($_SESSION['email'])) {
 
 <body>
 <header>
-    <h1>Écran Majestueux</h1>
+    <h1>Écran Majestueux : <?= $_SESSION['email']?></h1>
     <nav>
         <a href="#">Accueil</a>
         <a href="#films">Films à l'affiche</a> <!-- Lien modifié pour pointer vers #films -->
