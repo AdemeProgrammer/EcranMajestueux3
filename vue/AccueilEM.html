@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header('location: CoonexionEM.php');
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,7 +6,7 @@ if (!isset($_SESSION['email'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Écran Majestueux</title>
-    <link href="AccueilEM.css" rel="stylesheet">
+    <link href="../assets/css/AccueilEM.css" rel="stylesheet">
 
 </head>
 
@@ -37,37 +31,36 @@ if (!isset($_SESSION['email'])) {
     <h3>Nos films à l'affiche</h3>
     <div class="film-container">
         <div class="film">
-            <img src="img/F4.webp" alt="Film 1">
+            <img src="../assets/img/F4.webp" alt="Film 1">
         </div>
         <div class="film">
-            <img src="img/topgun.webp" alt="Film 2">
+            <img src="../assets/img/topgun.webp" alt="Film 2">
         </div>
         <div class="film">
-            <img src="img/deadpool3.webp" alt="Film 3">
+            <img src="../assets/img/deadpool3.webp" alt="Film 3">
         </div>
         <div class="film">
-            <img src="img/Tetris.jpg" alt="Film 4">
+            <img src="../assets/img/Tetris.jpg" alt="Film 4">
         </div>
 
         <div class="film">
-            <img src="img/Inter.jpg" alt="Film 5">
+            <img src="../assets/img/Inter.jpg" alt="Film 5">
         </div>
         <div class="film">
-            <img src="img/sonic3.jpg" alt="Film 6">
+            <img src="../assets/img/sonic3.jpg" alt="Film 6">
         </div>
     </div>
 </section>
 <footer>
     <hr>
-    <a href ="InscriptionEM.php"><p>Revenir à l'inscription</p></a>
-    <a href ="ConnexionEM.php"><p>Revenir à la connexion</p></a>
+    <a href ="../vue/InscriptionEM.html"><p>Revenir à l'inscription</p></a>
+    <a href ="../vue/ConnexionEM.html"><p>Revenir à la connexion</p></a>
     <br>
     <h1>Paramètre de compte :</h1>
-    <a href="DeconnexionEM.php"><p>Deconnexion du compte</p></a>
-    <a href="ModificationEM.php"><p>Modifier le compte</p></a>
-    <a href="SupressionEM.php"><p>Supression du compte</p></a>
+    <a href="../src/traitement/DeconnexionEM.php"><p>Deconnexion du compte</p></a>
+    <a href="../vue/ModificationEM.html"><p>Modifier le compte</p></a>
+    <a href="../vue/SupressionEM.html"><p>Supression du compte</p></a>
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
     <p>Suivez-nous sur les réseaux sociaux: <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a></p>
 </footer>
-
