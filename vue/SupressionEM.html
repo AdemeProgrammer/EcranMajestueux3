@@ -1,28 +1,16 @@
-<?php
-session_start();
-if (isset($_POST['mot_de_passe'])) {
-    $affirmsup = $_POST['suppression'];
-    if ($affirmsup == "SUPPRESSION DE COMPTE") {
-        $suppression = new PDO('mysql:host=localhost;dbname=ecranmajestueux', 'root', '');
-        $req = $suppression->prepare('DELETE * FROM utilisateurs WHERE id_utilisateur=:id_utilisateur');
-        $req->execute(array('id_utilisateur' => $_POST['id_utilisateur']));
-        header("location:ConnexionEM.php");
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Suppression</title>
-    <link href="ModificationSuppressionEM.css" rel="stylesheet">
+    <link href="../assets/css/ModificationSuppressionEM.css" rel="stylesheet">
 </head>
 <body>
 <form>
     <hr>
-    <a href="DeconnexionEM.php">Se déconnecter</a>
+    <a href="../src/traitement/DeconnexionEM.php">Se déconnecter</a>
     <br>
-    <a href="AccueilEM.php">Annuler la suppression</a>
+    <a href="../vue/AccueilEM.html">Annuler la suppression</a>
     <h1>Supression du compte de : <?= $_SESSION['email']?></h1>
     <hr>
     <p>La suppression d'un compte est définitve. Il est donc impossible de revenir en arrière.</p>
