@@ -12,7 +12,7 @@ if (!isset($_SESSION['email'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Écran Majestueux</title>
-    <link href="AccueilEM.css" rel="stylesheet">
+    <link href="assets/css/AccueilEM.css" rel="stylesheet">
 
 </head>
 
@@ -37,23 +37,23 @@ if (!isset($_SESSION['email'])) {
     <h3>Nos films à l'affiche</h3>
     <div class="film-container">
         <div class="film">
-            <img src="img/F4.webp" alt="Film 1">
+            <img src="assets/img/F4.webp" alt="Film 1">
         </div>
         <div class="film">
-            <img src="img/topgun.webp" alt="Film 2">
+            <img src="assets/img/topgun.webp" alt="Film 2">
         </div>
         <div class="film">
-            <img src="img/deadpool3.webp" alt="Film 3">
+            <img src="assets/img/deadpool3.webp" alt="Film 3">
         </div>
         <div class="film">
-            <img src="img/Tetris.jpg" alt="Film 4">
+            <img src="assets/img/Tetris.jpg" alt="Film 4">
         </div>
 
         <div class="film">
-            <img src="img/Inter.jpg" alt="Film 5">
+            <img src="assets/img/Inter.jpg" alt="Film 5">
         </div>
         <div class="film">
-            <img src="img/sonic3.jpg" alt="Film 6">
+            <img src="assets/img/sonic3.jpg" alt="Film 6">
         </div>
     </div>
 </section>
