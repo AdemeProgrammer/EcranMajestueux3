@@ -1,3 +1,3 @@
 <?php
-header("location:src/traitement/InscriptionEM.php");
+header("location:vue/InscriptionEM.php");
 ?>

@@ -1,9 +1,34 @@
 <?php
-require_once '../vendor/Film.php';
 
-if(empty($_POST['titre'])||empty($_POST["annee"])||empty($_POST["resume"])){
-    echo "Veuillez remplir tous les champs";
-    header("Location: ../vue/ajoutFilm.html");
+use modele\Utilisateurs;
+
+require_once '../bdd/Bdd.php';
+require_once '../../vue/InscriptionEM.php';
+require_once '../modele/Utilisateurs.php';
+require_once '../Repository/UtilisateursRepository.php';
+
+if(empty($_POST["nom"]) ||
+    empty($_POST["prenom"]) ||
+    empty($_POST["email"]) ||
+    empty($_POST["mot_de_passe"])){
+
+    echo "C'est pas bien ...";
+    header("Location: ../../vue/InscriptionEM.php");
 }else{
-    $film = new Film([])
+    $utilisateurs = new Utilisateurs([
+        'nom' => $_POST['nom'],
+        'prenom' => $_POST["prenom"],
+        'email' =>$_POST["email"],
+        'mot_de_passe' => $_POST["mot_de_passe"],
+        'role' => 'Client',
+    ]);
+    $UtilisateursRepository = new UtilisateursRepository();
+    $resultat = $UtilisateursRepository->ajoutUtilisateurs($utilisateurs);
+
+    if($resultat == true){
+        header("Location: ../../vue/Connexion.php");
+    }else{
+        header("Location: ../../vue/Inscription.php");
+    }
+
 }

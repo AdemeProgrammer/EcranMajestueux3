@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header('location: ../vue/ConnexionEM.html');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -53,14 +59,16 @@
 </section>
 <footer>
     <hr>
-    <a href ="../vue/InscriptionEM.html"><p>Revenir à l'inscription</p></a>
-    <a href ="../vue/ConnexionEM.html"><p>Revenir à la connexion</p></a>
+    <a href ="InscriptionEM.php"><p>Revenir à l'inscription</p></a>
+    <a href ="ConnexionEM.php"><p>Revenir à la connexion</p></a>
     <br>
     <h1>Paramètre de compte :</h1>
-    <a href="../src/traitement/DeconnexionEM.php"><p>Deconnexion du compte</p></a>
-    <a href="../vue/ModificationEM.html"><p>Modifier le compte</p></a>
-    <a href="../vue/SupressionEM.html"><p>Supression du compte</p></a>
+    <a href="DeconnexionEM.php"><p>Deconnexion du compte</p></a>
+    <a href="ModificationEM.php"><p>Modifier le compte</p></a>
+    <a href="SupressionEM.php"><p>Supression du compte</p></a>
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
     <p>Suivez-nous sur les réseaux sociaux: <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a></p>
 </footer>
+
+
