@@ -117,7 +117,7 @@ class Utilisateurs
         {
             $methode = 'set'.ucfirst($key);
 
-            if (method_exists(array($this, $methode)))
+            if (method_exists($this, $methode))
             {
                 $this->$methode($valeur);
             }
