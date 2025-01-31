@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Modification</title>
-    <link href="../../assets/css/ModificationSuppressionEM.css" rel="stylesheet">
+    <link href="../assets/css/ModificationSuppressionEM.css" rel="stylesheet">
 </head>
 <body>
 <hr>
