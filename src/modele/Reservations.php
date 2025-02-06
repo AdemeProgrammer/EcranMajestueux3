@@ -1,7 +1,4 @@
 <?php
-
-namespace modele;
-
 class Reservations
 {
     private $id_reservation;

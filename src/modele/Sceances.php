@@ -1,7 +1,5 @@
 <?php
 
-namespace modele;
-
 class Sceances
 {
     private $id_sceance;

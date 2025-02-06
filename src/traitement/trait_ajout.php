@@ -1,7 +1,4 @@
 <?php
-
-use modele\Utilisateurs;
-
 require_once '../bdd/Bdd.php';
 require_once '../../vue/InscriptionEM.php';
 require_once '../modele/Utilisateurs.php';
@@ -19,16 +16,16 @@ if(empty($_POST["nom"]) ||
         'nom' => $_POST['nom'],
         'prenom' => $_POST["prenom"],
         'email' =>$_POST["email"],
-        'mot_de_passe' => $_POST["mot_de_passe"],
+        'motDePasse' => $_POST["mot_de_passe"],
         'role' => 'Client',
     ]);
     $UtilisateursRepository = new UtilisateursRepository();
     $resultat = $UtilisateursRepository->ajoutUtilisateurs($utilisateurs);
 
     if($resultat == true){
-        header("Location: ../../vue/Connexion.php");
+        header("Location: ../../vue/ConnexionEM.php");
     }else{
-        header("Location: ../../vue/Inscription.php");
+        header("Location: ../../vue/InscriptionEM.php");
     }
 
 }
