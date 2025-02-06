@@ -1,14 +1,64 @@
-html{
-    background-image:url("img/suppression.jpg");
+html {
+    background-color : #0f0f0f;
+    background-size: cover;
+    background-position: center;
 }
 body {
-    background-color: ghostwhite;
+    background-color: #0f0f0f;
     width: 900px;
-    margin:auto;
+    margin: auto;
     padding: 32px;
-}
-a {
-    color: darkred;
-    font-weight: bold;
-    text-decoration-line: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+    h1 {
+        color: gold;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: Arial, sans-serif;
+        font-size: 1.1em;
+        color: #0f0f0f;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 20px 0;
+        border: 1px solid #1A1A1A;
+        border-radius: 5px;
+        font-size: 1em;
+        background-color: #f0f0f0;
+        color: #0f0f0f;
+    }
+
+    input[type="submit"] {
+        background-color: gold;
+        color: #0f0f0f;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: gold;
+    }
+
+    a {
+        color: darkred;
+        font-weight: bold;
+        text-decoration-line: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }

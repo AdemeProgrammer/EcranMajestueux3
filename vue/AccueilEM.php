@@ -68,7 +68,7 @@ if (!isset($_SESSION['email'])) {
     <a href="SupressionEM.php"><p>Supression du compte</p></a>
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
-    <p>Suivez-nous sur les réseaux sociaux: <a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Twitter</a></p>
+    <p>Suivez-nous sur les réseaux sociaux: <a href="https://www.facebook.com/share/18gNsJZcJq/">Facebook</a>, <a href="https://www.instagram.com/ecranmajestueux/">Instagram</a>, <a href="https://x.com/EcranM89780">X</a></p>
 </footer>
 
 
