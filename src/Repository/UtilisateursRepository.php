@@ -23,6 +23,15 @@ class UtilisateursRepository{
         }
 
     }
+
+    public function connexionUtilisateurs(Utilisateurs $utilisateurs){
+        $sql = "SELECT * FROM utilisateurs WHERE email=:email, mot_de_passe = :mot_de_passe";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $res = $req->execute(array(
+            'email' => $utilisateurs->getEmail(),
+            'mot_de_passe' => $utilisateurs->getMotDePasse()
+        ));
+    }
     public function modifUtilisateurs(Utilisateurs $utilisateurs){
         $sql = "INSERT INTO utilisateurs(nom,prenom,email,mot_de_passe) VALUES (:nom,:prenom,:email,:mot_de_passe)";
         $req = $this->bdd->getBdd()->prepare($sql);
