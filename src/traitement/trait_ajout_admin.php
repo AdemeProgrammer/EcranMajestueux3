@@ -1,7 +1,7 @@
 <?php
 
 require_once '../bdd/Bdd.php';
-require_once '../../vue/InscriptionEM.php';
+require_once '../../vue/InscriptionAdminEM.php';
 require_once '../modele/Utilisateurs.php';
 require_once '../Repository/UtilisateursRepository.php';
 
