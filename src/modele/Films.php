@@ -1,7 +1,4 @@
 <?php
-
-namespace modele;
-
 class Films
 {
     private $id_film;
