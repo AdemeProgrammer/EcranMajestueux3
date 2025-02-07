@@ -33,7 +33,7 @@ if (!isset($_SESSION['email'])) {
         <button onclick="window.location.href='#'">Découvrez nos films</button>
     </div>
 </section>
-<section id="films" class="films-section"> <!-- Ajout de l'ID "films" -->
+<section id="films" class="films-section">
     <h3>Nos films à l'affiche</h3>
     <div class="film-container">
         <div class="film">
