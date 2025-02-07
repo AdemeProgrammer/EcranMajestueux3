@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
-            <label for="agree-term" class="label-agree-term"><span><span></span></span>J'accepte toutes les déclarations dans les  <a href="#" class="term-service">conditions d'utilisation</a></label>
+            <label for="agree-term" class="label-agree-term"><span><span></span></span>J'accepte toutes les déclarations dans les  <a href="Conditions_d'utilisation.html" class="term-service">conditions d'utilisation</a></label>
         </div>
         <div class="form-group form-button">
             <input type="submit" name="signup" id="signup" class="form-submit" value="S'inscrire"/>
