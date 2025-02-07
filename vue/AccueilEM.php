@@ -21,7 +21,7 @@ if (!isset($_SESSION['email'])) {
     <h1>Écran Majestueux : <?= $_SESSION['email']?></h1>
     <nav>
         <a href="#">Accueil</a>
-        <a href="#films">Films à l'affiche</a> <!-- Lien modifié pour pointer vers #films -->
+        <a href="#films">Films à l'affiche</a>
         <a href="#">Utilisateur</a>
         <a href="#">Administrateur</a>
         <a href="#">Contact</a>
@@ -33,7 +33,7 @@ if (!isset($_SESSION['email'])) {
         <button onclick="window.location.href='#'">Découvrez nos films</button>
     </div>
 </section>
-<section id="films" class="films-section"> <!-- Ajout de l'ID "films" -->
+<section id="films" class="films-section">
     <h3>Nos films à l'affiche</h3>
     <div class="film-container">
         <div class="film">

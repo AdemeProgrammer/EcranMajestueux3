@@ -15,23 +15,15 @@ if (isset($_POST['mot_de_passe'])) {
 <head>
     <meta charset="UTF-8">
     <title>Suppression</title>
-    <link href="../../assets/css/ModificationSuppressionEM.css" rel="stylesheet">
+    <link href="../assets/css/Suppression.css" rel="stylesheet">
 </head>
 <body>
-<form>
-    <hr>
-    <a href="DeconnexionEM.php">Se déconnecter</a>
-    <br>
-    <a href="AccueilEM.php">Annuler la suppression</a>
-    <h1>Supression du compte de : <?= $_SESSION['email']?></h1>
-    <hr>
-    <p>La suppression d'un compte est définitve. Il est donc impossible de revenir en arrière.</p>
-    <p>De surcroît, ce site ne dispose pas de service client. Vous ne pourrez donc pas vous plaindre en cas de suppression de votre compte.</p>
-
-    <p>Voulez vous supprimer votre compte ? Si oui, écrivez : "SUPPRESSION DE COMPTE"</p>
-    <input type="text" name="suppression">
-    <input type = "submit" name ="validation">
-
-</form>
+<div class="container">
+    <h1>Suppression de Compte</h1>
+    <p>Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.</p>
+    <form action="/delete-account" method="POST">
+        <button type="submit">Supprimer mon compte</button>
+    </form>
+</div>
 </body>
 </html>
