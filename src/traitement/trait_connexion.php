@@ -17,11 +17,14 @@ if(empty($_POST["email"]) ||
     $UtilisateursRepository = new UtilisateursRepository();
     $resultat = $UtilisateursRepository->connexionUtilisateurs($utilisateurs);
 
-    if($resultat == true){
+    if ($resultat == true){
         session_start();
-        header("Location: ../../vue/AccueilEM.php");
-    }else{
-        header("Location: ../../vue/ConnexionEM.php");
+        $_SESSION['email'] = $utilisateurs->getEmail();
+        header("location:../../vue/AccueilEM.php");
+    }
+    else{
+        session_destroy();
+        header("location:../../vue/ConnexionEM.php");
     }
 
 }

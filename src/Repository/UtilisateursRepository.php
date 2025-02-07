@@ -25,12 +25,19 @@ class UtilisateursRepository{
     }
 
     public function connexionUtilisateurs(Utilisateurs $utilisateurs){
-        $sql = "SELECT * FROM utilisateurs WHERE email=:email, mot_de_passe = :mot_de_passe";
+        $sql = "SELECT * FROM utilisateurs WHERE email=:email AND mot_de_passe = :mot_de_passe";
         $req = $this->bdd->getBdd()->prepare($sql);
-        $res = $req->execute(array(
+        $res=$req->execute(array(
             'email' => $utilisateurs->getEmail(),
-            'mot_de_passe' => $utilisateurs->getMotDePasse()
+            'mot_de_passe' => $utilisateurs->getMotDePasse(),
         ));
+        $req -> fetch();
+        if($res == true){
+            return true;
+        }else{
+            return false;
+        }
+
     }
     public function modifUtilisateurs(Utilisateurs $utilisateurs){
         $sql = "INSERT INTO utilisateurs(nom,prenom,email,mot_de_passe) VALUES (:nom,:prenom,:email,:mot_de_passe)";
