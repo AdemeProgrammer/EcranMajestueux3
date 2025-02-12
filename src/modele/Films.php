@@ -87,4 +87,38 @@ class Films
     {
         $this->duree = $duree;
     }
+
+    private $affiche;
+
+    /**
+     * @return mixed
+     */
+    public function getAffiche()
+    {
+        return $this->affiche;
+    }
+
+    /**
+     * @param mixed $affiche
+     */
+    public function setAffiche($affiche)
+    {
+        $this->affiche = $affiche;
+    }
+    public function __construct(array $donnee){
+        $this->hydrate($donnee);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $valeur)
+        {
+            $methode = 'set'.ucfirst($key);
+
+            if (method_exists($this, $methode))
+            {
+                $this->$methode($valeur);
+            }
+        }
+    }
 }

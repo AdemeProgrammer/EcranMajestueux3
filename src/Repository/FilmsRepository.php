@@ -9,13 +9,14 @@ class FilmsRepository {
     }
 
     public function ajoutFilms(Films $films){
-        $sql = "INSERT INTO films(titre,description,genre,duree) VALUES (:titre,:description,:genre,:duree)";
+        $sql = "INSERT INTO films(titre,description,genre,duree,affiche) VALUES (:titre,:description,:genre,:duree, :affiche)";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute(array(
             'titre' => $films->getTitre(),
             'description' => $films->getDescription(),
             'genre' => $films->getGenre(),
-            'duree' => $films->getDuree()
+            'duree' => $films->getDuree(),
+            'affiche' => $films->getAffiche()
         ));
         if($res == true){
             return true;
@@ -25,13 +26,14 @@ class FilmsRepository {
 
     }
     public function modifFilms(Films $films){
-        $sql = "INSERT INTO films(titre,description,genre,duree) VALUES (:titre,:description,:genre,:duree)";
+        $sql = "INSERT INTO films(titre,description,genre,duree,affiche) VALUES (:titre,:description,:genre,:duree, :affiche)";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute(array(
             'titre' => $films->getTitre(),
             'description' => $films->getDescription(),
             'genre' => $films->getGenre(),
-            'duree' => $films->getDuree()
+            'duree' => $films->getDuree(),
+            'affiche' => $films->getAffiche()
         ));
         if($res == true){
             return true;
