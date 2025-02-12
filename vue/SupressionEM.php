@@ -9,7 +9,7 @@
 <div class="container">
     <h1>Suppression de Compte</h1>
     <p>Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.</p>
-    <form action="../src/traitement/trait_supp.php" method="POST">
+    <form action="../src/traitement/trait_supp.php" method="resultat">
         <button type="submit">Supprimer mon compte</button>
     </form>
 </div>

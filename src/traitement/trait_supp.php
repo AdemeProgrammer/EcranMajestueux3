@@ -7,8 +7,7 @@ require_once '../Repository/UtilisateursRepository.php';
 
 $utilisateurs = Utilisateurs();
 
-$UtilisateursRepository = new UtilisateursRepository();
-$resultat = $UtilisateursRepository->suppUtilisateurs($utilisateurs);
+$resultat = $utilisateurs->suppUtilisateurs($utilisateurs);
 
 if($resultat == true){
     header("Location: ../../vue/ConnexionEM.php");
