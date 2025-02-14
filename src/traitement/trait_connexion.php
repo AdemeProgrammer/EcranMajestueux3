@@ -16,10 +16,10 @@ if(empty($_POST["email"]) ||
     ]);
     $UtilisateursRepository = new UtilisateursRepository();
     $resultat = $UtilisateursRepository->connexionUtilisateurs($utilisateurs);
-
     if ($resultat == true){
         session_start();
         $_SESSION['email'] = $utilisateurs->getEmail();
+        $_SESSION['motDePasse'] = $utilisateurs->getMotDePasse();
         header("location:../../vue/AccueilEM.php");
     }
     else{

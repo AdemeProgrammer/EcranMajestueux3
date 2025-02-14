@@ -55,14 +55,12 @@ class UtilisateursRepository{
         }
 
     }
-
     public function suppUtilisateurs(Utilisateurs $utilisateurs){
-        $sql = "DELETE FROM utilisateurs WHERE id = :id";
+        $sql = "DELETE FROM utilisateurs WHERE email = :email";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute([
-            "id" => $utilisateurs->getIdUtilisateur()
+            'email' => $utilisateurs->getEmail()
             ]
         );
     }
-
 }
