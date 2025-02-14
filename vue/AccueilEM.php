@@ -23,7 +23,7 @@ if (!isset($_SESSION['email'])) {
         <a href="#">Accueil</a>
         <a href="#films">Films à l'affiche</a>
         <a href="#">Utilisateur</a>
-        <a href="#">Administrateur</a>
+        <a href="SceanceEM.php">Séances</a>
         <a href="#">Contact</a>
     </nav>
 </header>
