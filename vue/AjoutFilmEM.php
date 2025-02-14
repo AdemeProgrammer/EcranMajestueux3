@@ -13,7 +13,7 @@
 
 <div class="imagedefond">
     <h2 class="form-title">Ajout Film</h2>
-    <form method="POST" class="register-form" id="register-form" action="../src/traitement/trait_ajout.php">
+    <form method="POST" class="register-form" id="register-form" action="../src/traitement/trait_ajout_film.php">
         <div class="form-group">
             <label for="titre"></label>
             <input type="text" name="titre" id="titre" placeholder="Un titre" required/>
