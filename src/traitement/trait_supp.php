@@ -5,13 +5,13 @@ require_once '../../vue/SupressionEM.php';
 require_once '../modele/Utilisateurs.php';
 require_once '../Repository/UtilisateursRepository.php';
 
-$utilisateurs = Utilisateurs(['nom' => $_POST['nom'],
-    'prenom' => $_POST["prenom"],
-    'email' =>$_POST["email"],
-    'motDePasse' => $_POST["mot_de_passe"]]);
+$utilisateurs = new Utilisateurs([
+    "idUtilisateur" => $_POST[''],
+]);
+$utilisateurRepository = new UtilisateursRepository();
 
-$resultat = $utilisateurs->suppUtilisateurs($utilisateurs);
+$resultat = $utilisateurRepository->suppUtilisateurs($utilisateurs);
 
-if($resultat == true){
+if($resultat){
     header("Location: ../../vue/ConnexionEM.php");
 }
