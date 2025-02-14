@@ -4,9 +4,9 @@ require_once '../bdd/Bdd.php';
 require_once '../../vue/SupressionEM.php';
 require_once '../modele/Utilisateurs.php';
 require_once '../Repository/UtilisateursRepository.php';
-
+session_start();
 $utilisateurs = new Utilisateurs([
-    "idUtilisateur" => $_POST[''],
+    "email" => $_SESSION['email'],
 ]);
 $utilisateurRepository = new UtilisateursRepository();
 
