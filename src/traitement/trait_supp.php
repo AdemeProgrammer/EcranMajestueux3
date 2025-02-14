@@ -14,4 +14,5 @@ $resultat = $utilisateurRepository->suppUtilisateurs($utilisateurs);
 
 if($resultat){
     header("Location: ../../vue/ConnexionEM.php");
+    exit();
 }
