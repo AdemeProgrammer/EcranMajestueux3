@@ -40,7 +40,15 @@ class FilmsRepository {
         }else{
             return false;
         }
+    }
 
+    public function suppFilms(Utilisateurs $utilisateurs){
+        $sql = "DELETE FROM utilisateurs WHERE id = :id";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $res = $req->execute([
+                "id" => $utilisateurs->getIdUtilisateur()
+            ]
+        );
     }
 
 }
