@@ -8,21 +8,16 @@ require_once '../Repository/UtilisateursRepository.php';
 
 if(empty($_POST["nom"]) ||
     empty($_POST["prenom"]) ||
-    empty($_POST["email"]) ||
-    empty($_POST["mot_de_passe"]) ||
-    empty($_POST["role"])
+    empty($_POST["mot_de_passe"])
 ){
 
-    echo "C'est pas bien ...";
     header("Location: ../../vue/Connexion.php");
 }else{
-    $utilisateurs = new Utilisateurs([
-        'nom' =>$_POST['titre'],
-        'prenom' =>$_POST['prenom'],
-        'email' =>$_POST['email'],
-        'mot_de_passe' =>$_POST['mot_de_passe'],
-        'role' =>$_POST['role']
-    ]);
+    $utilisateurs = new Utilisateurs();
+    $utilisateurs->setNom($_POST["nom"]);
+    $utilisateurs->setPrenom($_POST["prenom"]);
+    $utilisateurs->setMotDePasse($_POST["mot_de_passe"]);
+
     $utilisateursRepository = new UtilisateursRepository();
     $resultat = $utilisateursRepository->modifUtilisateurs($utilisateurs);
 
