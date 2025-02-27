@@ -8,11 +8,10 @@ require_once '../Repository/UtilisateursRepository.php';
 
 if(empty($_POST["nom"]) ||
     empty($_POST["prenom"]) ||
-    empty($_POST["mot_de_passe"])
-){
+    empty($_POST["mot_de_passe"]))
+{header("Location: ../../vue/Connexion.php");}
 
-    header("Location: ../../vue/Connexion.php");
-}else{
+else{
     $utilisateurs = new Utilisateurs();
     $utilisateurs->setNom($_POST["nom"]);
     $utilisateurs->setPrenom($_POST["prenom"]);
