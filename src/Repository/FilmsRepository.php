@@ -1,6 +1,7 @@
 <?php
 
-class FilmsRepository {
+class FilmsRepository
+{
     private $bdd;
 
     public function __construct()
@@ -8,7 +9,8 @@ class FilmsRepository {
         $this->bdd = new Bdd();
     }
 
-    public function ajoutFilms(Films $films){
+    public function ajoutFilms(Films $films)
+    {
         $sql = "INSERT INTO films(titre,description,genre,duree,affiche) VALUES (:titre,:description,:genre,:duree, :affiche)";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute(array(
@@ -18,14 +20,16 @@ class FilmsRepository {
             'duree' => $films->getDuree(),
             'affiche' => $films->getAffiche()
         ));
-        if($res == true){
+        if ($res == true) {
             return true;
-        }else{
+        } else {
             return false;
         }
 
     }
-    public function modifFilms(Films $films){
+
+    public function modifFilms(Films $films)
+    {
         $sql = "INSERT INTO films(titre,description,genre,duree,affiche) VALUES (:titre,:description,:genre,:duree, :affiche)";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute(array(
@@ -35,14 +39,15 @@ class FilmsRepository {
             'duree' => $films->getDuree(),
             'affiche' => $films->getAffiche()
         ));
-        if($res == true){
+        if ($res == true) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
-    public function suppFilms(Utilisateurs $utilisateurs){
+    public function suppFilms(Utilisateurs $utilisateurs)
+    {
         $sql = "DELETE FROM utilisateurs WHERE id = :id";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute([
@@ -51,4 +56,14 @@ class FilmsRepository {
         );
     }
 
+
+public function catalogueFilms()
+{
+        $sql = "SELECT * FROM films";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_ASSOC); // Retourne un tableau de films
+
 }
+}
+
