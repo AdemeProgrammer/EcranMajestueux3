@@ -25,6 +25,7 @@ if (!isset($_SESSION['email'])) {
         <a href="#">Utilisateur</a>
         <a href="SceanceEM.php">Séances</a>
         <a href="#">Contact</a>
+        <a href="CatalogueEM.php">catalogue</a>
     </nav>
 </header>
 <section class="hero">
