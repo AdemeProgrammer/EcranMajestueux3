@@ -15,6 +15,7 @@ $filmsRepository = new FilmsRepository();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue de Films</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
             background-color: #ffffff;
@@ -64,6 +65,7 @@ $filmsRepository = new FilmsRepository();
         .movie-title {
             font-size: 1.5em;
             margin-bottom: 10px;
+            color: #000000;
         }
 
         .movie-description {
@@ -98,10 +100,9 @@ $filmsRepository = new FilmsRepository();
                 <img src="<?php echo htmlspecialchars($film['affiche']); ?>" alt="<?php echo htmlspecialchars($film['titre']); ?>">
                 <div class="movie-info">
                     <h2 class="movie-title"><?php echo htmlspecialchars($film['titre']); ?></h2>
-                    <p class="movie-description"><?php echo htmlspecialchars($film['description']); ?></p>
                     <p class="movie-genre"><strong>Genre :</strong> <?php echo htmlspecialchars($film['genre']); ?></p>
-                    <!-- Durée avec une nouvelle classe -->
                     <p class="movie-duration"><strong>Durée :</strong> <?php echo htmlspecialchars($film['duree']); ?> minutes</p>
+                    <p class="movie-description"><?php echo htmlspecialchars($film['description']); ?></p>
                 </div>
             </div>
         <?php endforeach; ?>
