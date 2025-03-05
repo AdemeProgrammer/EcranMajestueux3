@@ -24,16 +24,18 @@ if (!isset($_SESSION['email'])) {
         <a href="#films">Films à l'affiche</a>
         <a href="#">Utilisateur</a>
         <a href="SceanceEM.php">Séances</a>
-        <a href="#">Contact</a>
-        <a href="CatalogueEM.php">catalogue</a>
+        <a href="#contact">Contact</a>
+        <a href="CatalogueEM.php">Catalogue</a>
     </nav>
 </header>
+
 <section class="hero">
     <div>
         <h2>Bienvenue dans un monde cinématographique d'exception</h2>
         <button onclick="window.location.href='#'">Découvrez nos films</button>
     </div>
 </section>
+
 <section id="films" class="films-section">
     <h3>Nos films à l'affiche</h3>
     <div class="film-container">
@@ -49,7 +51,6 @@ if (!isset($_SESSION['email'])) {
         <div class="film">
             <a href="https://www.youtube.com/watch?v=-BLM1naCfME"><img src="../assets/img/Tetris.jpg" alt="Film 4"></a>
         </div>
-
         <div class="film">
             <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E"><img src="../assets/img/Inter.jpg" alt="Film 5"></a>
         </div>
@@ -58,6 +59,10 @@ if (!isset($_SESSION['email'])) {
         </div>
     </div>
 </section>
+
+<section id="contact" class="contact-section">
+</section>
+
 <footer>
     <hr>
     <a href ="InscriptionEM.php"><p>Revenir à l'inscription</p></a>
@@ -70,7 +75,8 @@ if (!isset($_SESSION['email'])) {
     <a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="Conditions_d'utilisation.html">Mentions légales</a> | <a href="Conditions_d'utilisation.html">Politique de confidentialité</a></p>
-    <p>Suivez-nous sur les réseaux sociaux: <a href="https://www.facebook.com/share/18gNsJZcJq/">Facebook</a>, <a href="https://www.instagram.com/ecranmajestueux/">Instagram</a>, <a href="https://x.com/EcranM89780">X</a></p>
+    <p>Suivez-nous sur les réseaux sociaux (ou contacter nous): <a href="https://www.facebook.com/share/18gNsJZcJq/">Facebook</a>, <a href="https://www.instagram.com/ecranmajestueux/">Instagram</a>, <a href="https://x.com/EcranM89780">X</a></p>
 </footer>
 
-
+</body>
+</html>
