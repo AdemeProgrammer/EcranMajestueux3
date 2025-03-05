@@ -1,8 +1,11 @@
 <?php
 require_once '../bdd/Bdd.php';
-require_once '../../vue/AjoutFilmEM.php';
+require_once  '../../vue/AjoutFilmEM.php';
 require_once '../modele/Films.php';
 require_once '../Repository/FilmsRepository.php';
+
+
+
 
 if(empty($_POST["titre"]) ||
     empty($_POST["description"]) ||
