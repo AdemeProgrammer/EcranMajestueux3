@@ -65,14 +65,18 @@ if (!isset($_SESSION['email'])) {
 
 <footer>
     <hr>
-    <a href ="InscriptionEM.php"><p>Revenir à l'inscription</p></a>
-    <a href ="ConnexionEM.php"><p>Revenir à la connexion</p></a>
-    <br>
     <h1>Paramètre de compte :</h1>
     <a href="DeconnexionEM.php"><p>Deconnexion du compte</p></a>
     <a href="ModificationEM.php"><p>Modifier le compte</p></a>
     <a href="SupressionEM.php"><p>Supression du compte</p></a>
     <a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>
+    <a href="ModifFilmEM.php"><p>Modifier un film</p></a>
+    <?php
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
+    echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
+}
+?>
+
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="Conditions_d'utilisation.html">Mentions légales</a> | <a href="Conditions_d'utilisation.html">Politique de confidentialité</a></p>
     <p>Suivez-nous sur les réseaux sociaux (ou contacter nous): <a href="https://www.facebook.com/share/18gNsJZcJq/">Facebook</a>, <a href="https://www.instagram.com/ecranmajestueux/">Instagram</a>, <a href="https://x.com/EcranM89780">X</a></p>
