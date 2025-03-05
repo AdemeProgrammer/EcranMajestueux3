@@ -46,12 +46,12 @@ class FilmsRepository
         }
     }
 
-    public function suppFilms(Utilisateurs $utilisateurs)
+    public function suppFilms(Films $films)
     {
-        $sql = "DELETE FROM utilisateurs WHERE id = :id";
+        $sql = "DELETE FROM films WHERE id = :id";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute([
-                "id" => $utilisateurs->getIdUtilisateur()
+                "id" => $films->getIdFilm()
             ]
         );
     }

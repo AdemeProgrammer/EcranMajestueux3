@@ -24,20 +24,22 @@ class UtilisateursRepository{
 
     }
 
-    public function connexionUtilisateurs(Utilisateurs $utilisateurs){
-        $sql = "SELECT * FROM utilisateurs WHERE email=:email AND mot_de_passe = :mot_de_passe";
+    public function connexionUtilisateurs(Utilisateurs $utilisateurs) {
+        $sql = "SELECT * FROM utilisateurs WHERE email = :email";
         $req = $this->bdd->getBdd()->prepare($sql);
-        $res=$req->execute(array(
-            'email' => $utilisateurs->getEmail(),
-            'mot_de_passe' => $utilisateurs->getMotDePasse(),
+        $req->execute(array(
+            'email' => $utilisateurs->getEmail()
         ));
-        $req -> fetch();
-        if($res == true){
-            return true;
-        }else{
-            return false;
+
+        $res = $req->fetch();
+
+        if ($res) {
+            if (password_verify($utilisateurs->getMotDePasse(), $res['mot_de_passe'])) {
+                return true;
+            }
         }
 
+        return false;
     }
     public function modifUtilisateurs(Utilisateurs $utilisateurs){
         $sql = "INSERT INTO utilisateurs(nom,prenom,email,mot_de_passe) VALUES (:nom,:prenom,:email,:mot_de_passe)";
