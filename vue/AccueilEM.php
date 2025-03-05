@@ -59,9 +59,6 @@ if (!isset($_SESSION['email'])) {
 </section>
 <footer>
     <hr>
-    <a href ="InscriptionEM.php"><p>Revenir à l'inscription</p></a>
-    <a href ="ConnexionEM.php"><p>Revenir à la connexion</p></a>
-    <br>
     <h1>Paramètre de compte :</h1>
     <a href="DeconnexionEM.php"><p>Deconnexion du compte</p></a>
     <a href="ModificationEM.php"><p>Modifier le compte</p></a>

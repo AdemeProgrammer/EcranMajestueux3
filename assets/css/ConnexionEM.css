@@ -5,7 +5,7 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #0f0f0f, #3a3a3a);
+    background: url('../img/inscription.gif') no-repeat center center fixed;
     color: #f0f0f0;
     text-align: center;
     padding: 50px 0;

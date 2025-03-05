@@ -16,7 +16,7 @@ if(empty($_POST["email"]) ||
     ]);
     $UtilisateursRepository = new UtilisateursRepository();
     $resultat = $UtilisateursRepository->connexionUtilisateurs($utilisateurs);
-    if ($resultat == true){
+    if ($resultat){
         session_start();
         $_SESSION['email'] = $utilisateurs->getEmail();
         $_SESSION['motDePasse'] = $utilisateurs->getMotDePasse();
