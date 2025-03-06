@@ -69,4 +69,14 @@ class UtilisateursRepository{
             ]
         );
     }
+
+    public function getUtilisateurById($id_utilisateur) {
+        $sql = "SELECT * FROM utilisateurs WHERE id_utilisateur = :id_utilisateur";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $req->execute([
+            'id_utilisateur' => $id_utilisateur
+        ]);
+
+        return $req->fetch();
+    }
 }

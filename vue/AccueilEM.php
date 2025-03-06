@@ -73,6 +73,7 @@ if (!isset($_SESSION['email'])) {
     if ($_SESSION['role'] == 'Admin') {
         echo '<hr>';
         echo '<h1>Paramètre Admin</h1>';
+        echo '<a href="AllUtilisateurs.php"><p>Voir tous les utilisateurs</p></a>';
         echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
         echo '<a href="SceanceEM.php"><p>Ajouter une scéance</p></a>';
     }
