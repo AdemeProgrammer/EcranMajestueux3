@@ -18,11 +18,11 @@ if (!isset($_SESSION['email'])) {
 
 <body>
 <header>
-    <h1>Écran Majestueux : <?= $_SESSION['email']?></h1>
+    <h1>Écran Majestueux : <?= $_SESSION['nom'] && $_SESSION['prenom']?></h1>
     <nav>
         <a href="#">Accueil</a>
         <a href="#films">Films à l'affiche</a>
-        <a href="#">Utilisateur</a>
+        <a href="UtilisateurEM.php">Utilisateur</a>
         <a href="SceanceEM.php">Séances</a>
         <a href="#contact">Contact</a>
         <a href="CatalogueEM.php">Catalogue</a>
@@ -73,8 +73,10 @@ if (!isset($_SESSION['email'])) {
     <a href="ModifFilmEM.php"><p>Modifier un film</p></a>
     <a href="SceanceEM.php"><p>Ajouter une scéance</p></a>
     <?php
-    if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
+    if ($_SESSION['role'] == 'Admin') {
         echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
+        echo '<a href="ModifFilmEM.php"><p>Modifier un film</p></a>';
+        echo '<a href="SceanceEM.php"><p>Ajouter une scéance</p></a>';
     }
     ?>
 

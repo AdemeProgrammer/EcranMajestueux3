@@ -17,7 +17,12 @@ if (!isset($_POST["email"]) || !isset($_POST["mot_de_passe"]) || empty($_POST["e
     $resultat = $utilisateursRepository->connexionUtilisateurs($utilisateurs);
     if ($resultat) {
         session_start();
+        $_SESSION['id_utilisateur']= $utilisateurs->getIdUtilisateur();
+        $_SESSION['nom'] = $utilisateurs->getNom();
+        $_SESSION['prenom'] = $utilisateurs->getPrenom();
         $_SESSION['email'] = $utilisateurs->getEmail();
+        $_SESSION['motDePasse'] = $utilisateurs->getMotDePasse();
+        $_SESSION['role'] = $utilisateurs->getRole();
         header("Location: ../../vue/AccueilEM.php");
     } else {
         session_destroy();
