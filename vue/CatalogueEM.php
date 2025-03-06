@@ -3,9 +3,13 @@
 require_once'../src/bdd/Bdd.php';
 require_once("../src/modele/Films.php");
 require_once("../src/Repository/FilmsRepository.php");
-$filmsRepository = new FilmsRepository();
-$lesFilms = $filmsRepository->catalogueFilms();
+require_once("../src/Repository/SceancesRepository.php");
 
+$filmsRepository = new FilmsRepository();
+$sceancesRepository = new SceancesRepository();
+
+// Récupérer la liste des films
+$lesFilms = $filmsRepository->catalogueFilms();
 
 ?>
 <!DOCTYPE html>
@@ -38,14 +42,40 @@ $lesFilms = $filmsRepository->catalogueFilms();
                 <p class="movie-genre"><strong>Genre :</strong> <?php echo htmlspecialchars($film['genre']); ?></p>
                 <p class="movie-duration"><strong>Durée :</strong> <?php echo htmlspecialchars($film['duree']); ?> minutes</p>
                 <p class="movie-description"><?php echo htmlspecialchars($film['description']); ?></p>
+
+                <!-- Récupérer toutes les séances pour ce film -->
+                <h3>Séances :</h3>
+                <?php
+                // Vérifier si des séances sont disponibles pour ce film
+                $seances = $sceancesRepository->seancesFilmId($film['id_film']); // On envoie l'ID du film
+                if ($seances): // Si des séances existent
+                    foreach ($seances as $seance): ?>
+                        <div class="seance">
+                            <p><strong>Date :</strong> <?php echo htmlspecialchars($seance['date']); ?></p>
+                            <p><strong>Heure :</strong> <?php echo htmlspecialchars($seance['heure']); ?></p>
+                            <p><strong>Salle :</strong> <?php echo htmlspecialchars($seance['salle']); ?></p>
+                            <p><strong>Places disponibles :</strong> <?php echo htmlspecialchars($seance['nb_place_dispo']); ?></p>
+                        </div>
+                    <?php
+                    endforeach;
+                else:
+                    ?>
+                    <p>Aucune séance disponible pour ce film pour le moment.</p>
+                <?php endif; ?>
             </div>
         </div>
     <?php endforeach; ?>
 </div>
 </body>
+
 <section id="contact" class="contact-section">
 </section>
+
 <hr>
 <br>
-<center><a style="color:white">Suivez-nous sur les réseaux sociaux (ou contacter nous):</a> <a href="https://www.facebook.com/share/18gNsJZcJq/" style="color: gold">Facebook</a><a style="color:white">,</a> <a href="https://www.instagram.com/ecranmajestueux/" style="color: gold">Instagram</a><a style="color:white">,</a> <a href="https://x.com/EcranM89780" style="color: gold">X</a></p></center>
+<center><a style="color:white">Suivez-nous sur les réseaux sociaux (ou contactez-nous) :</a>
+    <a href="https://www.facebook.com/share/18gNsJZcJq/" style="color: gold">Facebook</a><a style="color:white">,</a>
+    <a href="https://www.instagram.com/ecranmajestueux/" style="color: gold">Instagram</a><a style="color:white">,</a>
+    <a href="https://x.com/EcranM89780" style="color: gold">X</a></p></center>
+
 </html>

@@ -57,13 +57,14 @@ class FilmsRepository
     }
 
 
-public function catalogueFilms()
-{
+    public function catalogueFilms()
+    {
         $sql = "SELECT * FROM films";
         $req = $this->bdd->getBdd()->prepare($sql);
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC); // Retourne un tableau de films
 
-}
-}
+    }
 
+
+}
