@@ -1,7 +1,6 @@
 <?php
 
-class SceancesRepository
-{
+class SceancesRepository{
     private $bdd;
 
     public function __construct()
@@ -9,31 +8,23 @@ class SceancesRepository
         $this->bdd = new Bdd();
     }
 
-    public function ajoutSceance(Sceances $sceance)
+    public function ajoutSceance(Sceances $sceances)
     {
-        $sql = "INSERT INTO films(date,heure,salle,nb_place_dispo,ref_film) VALUES (:date,:heure,:salle,:nb_place_dispo,:ref_film)";
+        $sql = "INSERT INTO sceances(date,heure,salle,nb_place_dispo,ref_film) VALUES (:date,:heure,:salle,:nb_place_dispo,:ref_film)";
         $req = $this->bdd->getBdd()->prepare($sql);
         $res = $req->execute(array(
-            'date' => $sceance->getDate(),
-            'heure' => $sceance->getHeure(),
-            'salle' => $sceance->getSalle(),
-            'nb_place_dispo' => $sceance->getNbPlaceDispo(),
-            'ref_film' => $sceance->getRefFilm()
+            'date' => $sceances->getDate(),
+            'heure' => $sceances->getHeure(),
+            'salle' => $sceances->getSalle(),
+            'nb_place_dispo' => $sceances->getNbPlaceDispo(),
+            'ref_film' => $sceances->getRefFilm()
         ));
         if ($res == true) {
             return true;
         } else {
             return false;
         }
+
     }
-        public function seancesFilmId($filmId)
-        {
-
-            $sql = "SELECT * FROM sceances WHERE ref_film = :filmId";
-            $req = $this->bdd->getBdd()->prepare($sql);
-            $req->execute(['filmId' => $filmId]);
-            return $req->fetchAll(PDO::FETCH_ASSOC);
-        }
-
 
 }
