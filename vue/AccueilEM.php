@@ -71,11 +71,12 @@ if (!isset($_SESSION['email'])) {
     <a href="SupressionEM.php"><p>Supression du compte</p></a>
     <a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>
     <a href="ModifFilmEM.php"><p>Modifier un film</p></a>
+    <a href="SceanceEM.php"><p>Ajouter une scéance</p></a>
     <?php
-if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-    echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
-}
-?>
+    if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
+        echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
+    }
+    ?>
 
     <hr>
     <p>&copy; 2025 Écran Majestueux | <a href="Conditions_d'utilisation.html">Mentions légales</a> | <a href="Conditions_d'utilisation.html">Politique de confidentialité</a></p>
