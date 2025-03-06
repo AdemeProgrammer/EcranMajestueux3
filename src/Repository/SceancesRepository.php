@@ -24,7 +24,16 @@ class SceancesRepository{
         } else {
             return false;
         }
-
     }
+        public function seancesFilmId($filmId)
+    {
+
+        $sql = "SELECT * FROM sceances WHERE ref_film = :filmId";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $req->execute(['filmId' => $filmId]);
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
 
 }
