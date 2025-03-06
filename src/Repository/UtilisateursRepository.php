@@ -35,6 +35,12 @@ class UtilisateursRepository{
 
         if ($res) {
             if (password_verify($utilisateurs->getMotDePasse(), $res['mot_de_passe'])) {
+                $utilisateurs->setIdUtilisateur($res['id_utilisateur']);
+                $utilisateurs->setNom($res['nom']);
+                $utilisateurs->setPrenom($res['prenom']);
+                $utilisateurs->setEmail($res['email']);
+                $utilisateurs->setRole($res['role']);
+
                 return true;
             }
         }

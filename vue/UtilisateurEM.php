@@ -9,9 +9,17 @@ if (!isset($_SESSION['email'])) {
 <head>
     <meta charset="UTF-8">
     <title>Compte</title>
+    <link href="../assets/css/CatalogueEM.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Compte : <?= $_SESSION['email']?></h1>
+    <h1>Compte de : <?= $_SESSION['nom']?> <?= $_SESSION['prenom']?></h1>
+    <nav>
+        <a href="AccueilEM.php">Accueil</a>
+        <a href="#films">Films à l'affiche</a>
+        <a href="#">Utilisateur</a>
+        <a href="SceanceEM.php">Séances</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <p>Id compte : <?= $_SESSION['id_utilisateur']?></p>
     <p>Nom : <?= $_SESSION['nom']?></p>

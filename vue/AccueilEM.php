@@ -18,12 +18,12 @@ if (!isset($_SESSION['email'])) {
 
 <body>
 <header>
-    <h1>Écran Majestueux : <?= $_SESSION['nom'] && $_SESSION['prenom']?></h1>
+    <h1>Écran Majestueux : <?= $_SESSION['nom']?> <?= $_SESSION['prenom']?></h1>
     <nav>
         <a href="#">Accueil</a>
         <a href="#films">Films à l'affiche</a>
         <a href="UtilisateurEM.php">Utilisateur</a>
-        <a href="SceanceEM.php">Séances</a>
+        <a href="CatalogueEM.php">Séances</a>
         <a href="#contact">Contact</a>
         <a href="CatalogueEM.php">Catalogue</a>
     </nav>
@@ -69,13 +69,11 @@ if (!isset($_SESSION['email'])) {
     <a href="DeconnexionEM.php"><p>Deconnexion du compte</p></a>
     <a href="ModificationEM.php"><p>Modifier le compte</p></a>
     <a href="SupressionEM.php"><p>Supression du compte</p></a>
-    <a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>
-    <a href="ModifFilmEM.php"><p>Modifier un film</p></a>
-    <a href="SceanceEM.php"><p>Ajouter une scéance</p></a>
     <?php
     if ($_SESSION['role'] == 'Admin') {
+        echo '<hr>';
+        echo '<h1>Paramètre Admin</h1>';
         echo '<a href="AjoutFilmEM.php"><p>Ajouter un film</p></a>';
-        echo '<a href="ModifFilmEM.php"><p>Modifier un film</p></a>';
         echo '<a href="SceanceEM.php"><p>Ajouter une scéance</p></a>';
     }
     ?>
