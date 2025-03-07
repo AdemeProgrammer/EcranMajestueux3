@@ -16,7 +16,7 @@ if (isset($_GET['id_utilisateur'])) {
     $stmt->execute(['id_utilisateur' => $id_utilisateur]);
     $utilisateur = $stmt->fetch();
 
-    if (!$utilisateur) {  //ici on vérifie si l'utilisateur existe bien
+    if (!$utilisateur) {
         echo "Utilisateur non trouvé!";
         exit();
     }
@@ -38,13 +38,13 @@ if (isset($_GET['id_utilisateur'])) {
     <input type="hidden" name="id_utilisateur" value="<?php echo $utilisateur['id_utilisateur']; ?>">
 
     <label for="nom">Nom:</label>
-    <input type="text" name="nom" value="<?php echo htmlspecialchars($utilisateur['nom']); ?>" required>
+    <input type="text" name="nom" value="<?php echo ($utilisateur['nom']); ?>" required>
 
     <label for="prenom">Prénom:</label>
-    <input type="text" name="prenom" value="<?php echo htmlspecialchars($utilisateur['prenom']); ?>" required>
+    <input type="text" name="prenom" value="<?php echo ($utilisateur['prenom']); ?>" required>
 
     <label for="email">Email:</label>
-    <input type="email" name="email" value="<?php echo htmlspecialchars($utilisateur['email']); ?>" required>
+    <input type="email" name="email" value="<?php echo ($utilisateur['email']); ?>" required>
 
     <label for="role">Rôle:</label>
     <select name="role">

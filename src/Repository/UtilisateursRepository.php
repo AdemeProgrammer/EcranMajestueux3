@@ -70,6 +70,17 @@ class UtilisateursRepository{
         );
     }
 
+    public function suppUtilisateursAdmin($id_utilisateur){
+        $sql = "DELETE FROM utilisateurs WHERE id_utilisateur = :id_utilisateur";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $res = $req->execute([
+            'id_utilisateur' => $id_utilisateur
+        ]);
+
+        return $res; // Retourne vrai ou faux selon le succès de la suppression
+    }
+
+
     public function getUtilisateurById($id_utilisateur) {
         $sql = "SELECT * FROM utilisateurs WHERE id_utilisateur = :id_utilisateur";
         $req = $this->bdd->getBdd()->prepare($sql);
