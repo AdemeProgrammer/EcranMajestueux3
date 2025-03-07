@@ -48,8 +48,8 @@ if (isset($_GET['id_utilisateur'])) {
 
     <label for="role">Rôle:</label>
     <select name="role">
-        <option value="user" <?php if ($utilisateur['role'] == 'Client') echo 'selected'; ?>>Client</option>
-        <option value="admin" <?php if ($utilisateur['role'] == 'Admin') echo 'selected'; ?>>Administrateur</option>
+        <option value="Client" <?php if ($utilisateur['role'] == 'Client') echo 'selected'; ?>>Client</option>
+        <option value="Admin" <?php if ($utilisateur['role'] == 'Admin') echo 'selected'; ?>>Administrateur</option>
     </select>
 
     <input type="submit" value="Modifier le compte">
