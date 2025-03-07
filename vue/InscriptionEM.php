@@ -45,8 +45,6 @@
     </form>
 </div>
 <a href="ConnexionEM.php">Je suis déjà membre</a>
-<br>
-<a href="InscriptionAdminEM.php">Créer un compte admin</a>
 </body>
 </html>
 
