@@ -6,7 +6,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: black;
-    color: #f0f0f0;
+    color: rgba(15, 15, 15, 0.8);
     text-align: center;
     padding: 50px 0;
     height: 100vh;

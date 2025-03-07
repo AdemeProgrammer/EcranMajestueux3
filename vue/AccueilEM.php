@@ -32,7 +32,7 @@ if (!isset($_SESSION['email'])) {
 <section class="hero">
     <div>
         <h2>Bienvenue dans un monde cinématographique d'exception</h2>
-        <button onclick="window.location.href='#'">Découvrez nos films</button>
+        <button onclick="window.location.href='CatalogueEM.php'">Découvrez nos films</button>
     </div>
 </section>
 
