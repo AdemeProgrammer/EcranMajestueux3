@@ -15,6 +15,7 @@ if (isset($_GET['id_utilisateur'])) {
     $stmt = $conn->prepare($sql);
     $stmt->execute(['id_utilisateur' => $id_utilisateur]);
     $utilisateur = $stmt->fetch();
+    header("Location:AllUtilisateurs.php");
 
     if (!$utilisateur) {
         echo "Utilisateur non trouvé!";
