@@ -42,7 +42,7 @@ $utilisateurs = $stmt->fetchAll();
                 <a href="ModifAdmin.php?id_utilisateur=<?php echo $utilisateur['id_utilisateur']; ?>">Modifier</a>
             </td>
             <td>
-                <a href="SuppressionAdminEM.php?id_utilisateur=<?php echo $utilisateur['id_utilisateur']?>">Supprimer</a>
+                <a href="SuppressionAdminEM.php?id_utilisateur<?php echo $utilisateur['id_utilisateur']?>">Supprimer</a>
             </td>
         </tr>
     <?php endforeach; ?>

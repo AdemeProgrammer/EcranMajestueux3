@@ -35,3 +35,4 @@ if (isset($_POST['id_utilisateur'], $_POST['nom'], $_POST['prenom'], $_POST['ema
     echo "Veuillez remplir tous les champs.";
 }
 ?>
+
