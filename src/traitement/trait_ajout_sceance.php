@@ -24,7 +24,7 @@ if(empty($_POST["date"]) ||
     $resultat = $SceancesRepository->ajoutSceance($sceance);
 
     if($resultat == true){
-        header("Location: ../../vue/AccueilEM.php");
+        header("Location: ../../vue/CatalogueEM.php");
     }else{
         header("Location: ../../vue/AjoutFilmEM.php");
     }
