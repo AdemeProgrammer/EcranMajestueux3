@@ -1,6 +1,7 @@
 <?php
 
-class ReservationsRepository{
+class ReservationsRepository
+{
     private $bdd;
 
     public function __construct()

@@ -18,22 +18,22 @@ class Reservations
     {
         $this->id_reservation = $id_reservation;
     }
-    private $nb_place_dispo;
+    private $nb_place_reservee;
 
     /**
      * @return mixed
      */
-    public function getNbPlaceDispo()
+    public function getNbPlaceReservee()
     {
-        return $this->nb_place_dispo;
+        return $this->nb_place_reservee;
     }
 
     /**
-     * @param mixed $nb_place_dispo
+     * @param mixed $nb_place_reservee
      */
-    public function setNbPlaceDispo($nb_place_dispo)
+    public function setNbPlaceReservee($nb_place_reservee)
     {
-        $this->nb_place_dispo = $nb_place_dispo;
+        $this->nb_place_reservee = $nb_place_reservee;
     }
     private $ref_utilisateur;
 
@@ -68,5 +68,21 @@ class Reservations
     public function setRefSceance($ref_sceance)
     {
         $this->ref_sceance = $ref_sceance;
+    }
+    public function __construct(array $donnee){
+        $this->hydrate($donnee);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $valeur)
+        {
+            $methode = 'set'.ucfirst($key);
+
+            if (method_exists($this, $methode))
+            {
+                $this->$methode($valeur);
+            }
+        }
     }
 }
