@@ -5,9 +5,8 @@ body {
     padding: 0;
 }
 
-
 header {
-    background: linear-gradient(90deg, #1a1a1a 0%, #000 100%);
+    background: linear-gradient(90deg, black 0%, #000000 100%);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -15,6 +14,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
 }
 
 nav a {

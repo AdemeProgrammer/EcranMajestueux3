@@ -40,6 +40,12 @@
         <div class="form-group form-button">
             <input type="submit" name="signup" id="signup" class="form-submit" value="S'inscrire"/>
         </div>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+
 
 
     </form>

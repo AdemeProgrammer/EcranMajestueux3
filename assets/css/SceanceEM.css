@@ -1,8 +1,9 @@
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: black;
@@ -11,6 +12,7 @@ body {
     padding: 50px 0;
     height: 100vh;
 }
+
 h2.form-title {
     color: gold;
     font-size: 3rem;
@@ -20,6 +22,7 @@ h2.form-title {
     margin: 0;
     letter-spacing: 1px;
 }
+
 .imagedefond {
     background-color: rgba(15, 15, 15, 0.8);
     padding: 40px;
@@ -28,29 +31,32 @@ h2.form-title {
     max-width: 450px;
     margin: 0 auto;
 }
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
 }
+
 label {
     font-size: 1rem;
     color: #f0f0f0;
     margin-bottom: 5px;
     display: block;
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="submit"] {
+
+input[type="date"],
+input[type="time"],
+input[type="number"] {
     width: 100%;
-    padding: 12px;
-    margin: 5px 0 15px 0;
-    border: 1px solid #f0f0f0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333333;
-    color: #0f0f0f;
-    font-size: 1.1rem;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
 }
+
 input[type="submit"] {
     background-color: gold;
     color: #0f0f0f;
@@ -58,18 +64,16 @@ input[type="submit"] {
     border: none;
     font-size: 1.1rem;
     letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
 }
+
 input[type="submit"]:hover {
     background-color: #d4af37;
     transform: scale(1.05);
 }
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-.label-agree-term {
-    color: #f0f0f0;
-    font-size: 0.9rem;
-}
+
 a {
     color: gold;
     text-decoration: none;
@@ -77,10 +81,12 @@ a {
     display: inline-block;
     margin-top: 20px;
 }
+
 a:hover {
     text-decoration: underline;
     color: #d4af37;
 }
+
 @media (max-width: 600px) {
     h2.form-title {
         font-size: 2.5rem;
@@ -91,9 +97,6 @@ a:hover {
         width: 90%;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
     input[type="submit"] {
         font-size: 1rem;
     }

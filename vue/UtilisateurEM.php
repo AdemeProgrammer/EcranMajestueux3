@@ -9,7 +9,7 @@ if (!isset($_SESSION['email'])) {
 <head>
     <meta charset="UTF-8">
     <title>Compte</title>
-    <link href="../assets/css/CatalogueEM.css" rel="stylesheet">
+    <link href="../assets/css/UtilisateurEM.css" rel="stylesheet">
 </head>
 <body>
     <h1>Compte de : <?= $_SESSION['nom']?> <?= $_SESSION['prenom']?></h1>
