@@ -1,9 +1,9 @@
 <?php
 
 require_once'../src/bdd/Bdd.php';
-require_once("../src/modele/Films.php");
-require_once("../src/Repository/FilmsRepository.php");
-require_once("../src/Repository/SceancesRepository.php");
+require_once"../src/modele/Films.php";
+require_once"../src/Repository/FilmsRepository.php";
+require_once"../src/Repository/SceancesRepository.php";
 
 $filmsRepository = new FilmsRepository();
 $sceancesRepository = new SceancesRepository();
@@ -35,12 +35,18 @@ $lesFilms = $filmsRepository->catalogueFilms();
 <div class="container">
     <?php foreach ($lesFilms as $film): ?>
         <div class="movie">
-            <img src="<?php echo($film['affiche']); ?>" alt="<?php echo($film['titre']); ?>">
+            <a href="ReservationEM.php?id_film=<?php echo $film['id_film']; ?>">
+                <img src="<?php echo $film['affiche']; ?>" alt="<?php echo $film['titre']; ?>">
+            </a>
             <div class="movie-info">
-                <h2 class="movie-title"><?php echo($film['titre']); ?></h2>
-                <p class="movie-genre"><strong>Genre :</strong> <?php echo($film['genre']); ?></p>
-                <p class="movie-duration"><strong>Durée :</strong> <?php echo($film['duree']); ?> minutes</p>
-                <p class="movie-description"><?php echo($film['description']); ?></p>
+                <h2 class="movie-title">
+                    <a href="ReservationEM.php?id_film=<?php echo $film['id_film']; ?>">
+                        <?php echo $film['titre']; ?>
+                    </a>
+                </h2>
+                <p class="movie-genre"><strong>Genre :</strong> <?php echo $film['genre']; ?></p>
+                <p class="movie-duration"><strong>Durée :</strong> <?php echo $film['duree']; ?> minutes</p>
+                <p class="movie-description"><?php echo $film['description']; ?></p>
 
                 <!-- Récupérer toutes les séances pour ce film -->
                 <h3>Séances :</h3>

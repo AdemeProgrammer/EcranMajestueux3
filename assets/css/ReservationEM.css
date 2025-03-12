@@ -1,0 +1,150 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Film Details Section */
+.movie-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-details img {
+    width: 100px;   /* Réduire encore la largeur */
+    height: 150px;  /* Réduire encore la hauteur */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.movie-info {
+    max-width: 300px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.movie-info p {
+    color: #555;
+    font-size: 1em;
+}
+
+.movie-info .movie-genre,
+.movie-info .movie-duration {
+    font-weight: bold;
+}
+
+.movie-info .movie-description {
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+/* Reservation Form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-container form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+form h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffd700;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-details img {
+        width: 100%;
+        height: auto;
+    }
+
+    .movie-info {
+        max-width: 100%;
+    }
+
+    .form-container form {
+        padding: 20px;
+    }
+}

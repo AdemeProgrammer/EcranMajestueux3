@@ -65,6 +65,13 @@ class FilmsRepository
         return $req->fetchAll(PDO::FETCH_ASSOC); // Retourne un tableau de films
 
     }
+    public function getFilmById($idFilm)
+    {
+        $sql = "SELECT * FROM films WHERE id_film = :id_film";
+        $req = $this->bdd->getBdd()->prepare($sql);
+        $req->execute(['id_film' => $idFilm]);
+        return $req->fetch(PDO::FETCH_ASSOC); // Retourne un tableau associatif
+    }
 
 
 }
